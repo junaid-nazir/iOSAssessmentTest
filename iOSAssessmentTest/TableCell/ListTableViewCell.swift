@@ -14,11 +14,11 @@ class ListTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        configureUI()
     }
     
-    func ConfigureUI() {
-        titleLabel.numberOfLines = 2
+    func configureUI() {
+        titleLabel.numberOfLines = 0
     }
     
     func configureCell(data: JsonResponseModel?) {

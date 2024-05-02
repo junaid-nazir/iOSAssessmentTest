@@ -24,16 +24,6 @@ class JsonResponseViewModel {
             }
         }
     }
-    
-    
-    func getErrorMessage(error: ApiError) {
-        switch error {
-        case .apiOperationFailed(let errorMessage):
-            self.errorMessage = errorMessage
-        case .decodingError(let errorMessage):
-            self.errorMessage = errorMessage
-        }
-    }
 
 }
 
