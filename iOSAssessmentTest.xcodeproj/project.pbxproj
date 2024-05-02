@@ -56,15 +56,55 @@
 		26A6666A2BE34C0300863A8C /* iOSAssessmentTest */ = {
 			isa = PBXGroup;
 			children = (
+				26A666832BE34FCC00863A8C /* Service */,
+				26A666822BE34F8200863A8C /* TableCell */,
+				26A666812BE34F2500863A8C /* ViewModel */,
+				26A666802BE34F1A00863A8C /* Model */,
+				26A6667F2BE34F0A00863A8C /* Contoller */,
 				26A6666B2BE34C0300863A8C /* AppDelegate.swift */,
 				26A6666D2BE34C0300863A8C /* SceneDelegate.swift */,
-				26A6666F2BE34C0300863A8C /* ViewController.swift */,
 				26A666712BE34C0300863A8C /* Main.storyboard */,
 				26A666742BE34C0600863A8C /* Assets.xcassets */,
 				26A666762BE34C0600863A8C /* LaunchScreen.storyboard */,
 				26A666792BE34C0600863A8C /* Info.plist */,
 			);
 			path = iOSAssessmentTest;
+			sourceTree = "<group>";
+		};
+		26A6667F2BE34F0A00863A8C /* Contoller */ = {
+			isa = PBXGroup;
+			children = (
+				26A6666F2BE34C0300863A8C /* ViewController.swift */,
+			);
+			path = Contoller;
+			sourceTree = "<group>";
+		};
+		26A666802BE34F1A00863A8C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		26A666812BE34F2500863A8C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		26A666822BE34F8200863A8C /* TableCell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TableCell;
+			sourceTree = "<group>";
+		};
+		26A666832BE34FCC00863A8C /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
