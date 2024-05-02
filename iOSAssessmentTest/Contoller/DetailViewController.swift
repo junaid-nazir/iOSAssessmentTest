@@ -24,6 +24,7 @@ class DetailViewController: UIViewController {
             return
         }
         titleLabel.numberOfLines = 0
+        bodyLabel.numberOfLines = 0
         userIdLabel.text = String(data.userId)
         titleLabel.text = data.title
         bodyLabel.text = data.body
