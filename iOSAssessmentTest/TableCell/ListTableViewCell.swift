@@ -17,4 +17,16 @@ class ListTableViewCell: UITableViewCell {
         // Initialization code
     }
     
+    func ConfigureUI() {
+        titleLabel.numberOfLines = 2
+    }
+    
+    func configureCell(data: JsonResponseModel?) {
+        guard let model = data else {
+            return
+        }
+        titleLabel.text = model.title
+        idLabel.text = String(model.id)
+    }
+    
 }

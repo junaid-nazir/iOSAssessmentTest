@@ -7,11 +7,12 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-    
+class ViewController: UIViewController, TableViewDataSourceDelegate {
+   
     @IBOutlet private weak var tableView: UITableView!
     private var dataSource: TableViewDataSource?
     private let viewModel = JsonResponseViewModel()
+    var model: JsonResponseModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,12 +24,13 @@ class ViewController: UIViewController {
     
     func initDataSource() {
         dataSource = TableViewDataSource(viewModel)
+        dataSource?.delegate = self
         tableView.delegate = dataSource
         tableView.dataSource = dataSource
     }
     
     func registerCells() {
-        tableView.register(ListTableViewCell.self, forCellReuseIdentifier: "ListTableViewCell")
+        self.tableView.register(ListTableViewCell.nib(bundleIdentifier: Constants.bundleIdentifier), forCellReuseIdentifier: "ListTableViewCell")
     }
     
     func loadData() {
@@ -44,5 +46,18 @@ class ViewController: UIViewController {
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showDetailView" {
+            if let controller = segue.destination as? DetailViewController {
+                if let detailModel = sender as? JsonResponseModel{
+                    controller.detailModel = detailModel
+                }
+            }
+        }
+    }
+    
+    func navigateToVC(data: JsonResponseModel) {
+        performSegue(withIdentifier: "showDetailView", sender: data)
+    }
 }
 

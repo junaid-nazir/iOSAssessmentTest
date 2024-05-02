@@ -16,18 +16,18 @@
                 <rect key="frame" x="0.0" y="0.0" width="410" height="86"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <stackView opaque="NO" contentMode="scaleToFill" spacing="70" translatesAutoresizingMaskIntoConstraints="NO" id="bO4-sq-Gaf">
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="vrp-1V-1Gr">
                         <rect key="frame" x="16" y="16" width="378" height="54"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TmY-Qv-K8Z">
-                                <rect key="frame" x="0.0" y="0.0" width="266.66666666666669" height="54"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dPf-FV-kRs">
+                                <rect key="frame" x="0.0" y="0.0" width="29.666666666666668" height="14"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dPf-FV-kRs">
-                                <rect key="frame" x="336.66666666666669" y="0.0" width="41.333333333333314" height="54"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TmY-Qv-K8Z">
+                                <rect key="frame" x="0.0" y="30" width="39.333333333333336" height="24"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -35,16 +35,16 @@
                     </stackView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="bO4-sq-Gaf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="M5e-Zp-Pdx"/>
-                    <constraint firstAttribute="bottom" secondItem="bO4-sq-Gaf" secondAttribute="bottom" constant="16" id="eAF-zU-FZM"/>
-                    <constraint firstAttribute="trailing" secondItem="bO4-sq-Gaf" secondAttribute="trailing" constant="16" id="eCl-6l-hf6"/>
-                    <constraint firstItem="bO4-sq-Gaf" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="gKQ-F8-xdp"/>
+                    <constraint firstItem="vrp-1V-1Gr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="2JJ-Dq-n5h"/>
+                    <constraint firstItem="vrp-1V-1Gr" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="eb8-xP-M2j"/>
+                    <constraint firstAttribute="trailing" secondItem="vrp-1V-1Gr" secondAttribute="trailing" constant="16" id="gNv-8t-pJz"/>
+                    <constraint firstAttribute="bottom" secondItem="vrp-1V-1Gr" secondAttribute="bottom" constant="16" id="lI2-Vr-10F"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="idLabel" destination="dPf-FV-kRs" id="hKf-Qe-3Xw"/>
-                <outlet property="titleLabel" destination="TmY-Qv-K8Z" id="7ON-5g-7Vz"/>
+                <outlet property="idLabel" destination="dPf-FV-kRs" id="fcc-GZ-9a6"/>
+                <outlet property="titleLabel" destination="TmY-Qv-K8Z" id="n7d-09-2rd"/>
             </connections>
             <point key="canvasLocation" x="201.52671755725191" y="34.507042253521128"/>
         </tableViewCell>

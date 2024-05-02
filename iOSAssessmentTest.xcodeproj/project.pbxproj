@@ -20,6 +20,7 @@
 		26A6668E2BE355E800863A8C /* JsonResponseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A6668D2BE355E800863A8C /* JsonResponseViewModel.swift */; };
 		26A666912BE35F4900863A8C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A666902BE35F4900863A8C /* Constants.swift */; };
 		26A666932BE3614300863A8C /* ServiceManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A666922BE3614300863A8C /* ServiceManger.swift */; };
+		26A666952BE3896100863A8C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A666942BE3896100863A8C /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		26A6668D2BE355E800863A8C /* JsonResponseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonResponseViewModel.swift; sourceTree = "<group>"; };
 		26A666902BE35F4900863A8C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		26A666922BE3614300863A8C /* ServiceManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManger.swift; sourceTree = "<group>"; };
+		26A666942BE3896100863A8C /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				26A6666F2BE34C0300863A8C /* ViewController.swift */,
+				26A666942BE3896100863A8C /* DetailViewController.swift */,
 			);
 			path = Contoller;
 			sourceTree = "<group>";
@@ -223,6 +226,7 @@
 				26A6666E2BE34C0300863A8C /* SceneDelegate.swift in Sources */,
 				26A6668E2BE355E800863A8C /* JsonResponseViewModel.swift in Sources */,
 				26A666882BE351A800863A8C /* ListTableViewCell.swift in Sources */,
+				26A666952BE3896100863A8C /* DetailViewController.swift in Sources */,
 				26A666912BE35F4900863A8C /* Constants.swift in Sources */,
 				26A666932BE3614300863A8C /* ServiceManger.swift in Sources */,
 			);
