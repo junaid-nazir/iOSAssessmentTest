@@ -8,7 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController, TableViewDataSourceDelegate {
-   
+    
     @IBOutlet private weak var tableView: UITableView!
     private var dataSource: TableViewDataSource?
     private let viewModel = JsonResponseViewModel()
@@ -36,7 +36,7 @@ class ViewController: UIViewController, TableViewDataSourceDelegate {
     func loadData() {
         viewModel.fetchListOfRecords {[weak self] code in
             guard let currentSelf = self else { return }
-            if code == Constants.successCode && currentSelf.viewModel.response != nil {
+            if code == Constants.successCode && currentSelf.viewModel.allData != nil {
                 DispatchQueue.main.async {
                     currentSelf.tableView.reloadData()
                 }
@@ -58,6 +58,12 @@ class ViewController: UIViewController, TableViewDataSourceDelegate {
     
     func navigateToVC(data: JsonResponseModel) {
         performSegue(withIdentifier: "showDetailView", sender: data)
+    }
+    
+    func reloadData() {
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
     }
 }
 
