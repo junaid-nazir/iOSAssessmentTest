@@ -8,11 +8,14 @@
 import UIKit
 
 class ViewController: UIViewController, TableViewDataSourceDelegate {
-    
+   
     @IBOutlet private weak var tableView: UITableView!
     private var dataSource: TableViewDataSource?
     private let viewModel = JsonResponseViewModel()
     var model: JsonResponseModel?
+    var pageLimit = 10
+    var currentPage = 1
+    var refreshControl: UIRefreshControl?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,18 +36,25 @@ class ViewController: UIViewController, TableViewDataSourceDelegate {
         self.tableView.register(ListTableViewCell.nib(bundleIdentifier: Constants.bundleIdentifier), forCellReuseIdentifier: "ListTableViewCell")
     }
     
-    func loadData() {
-        viewModel.fetchListOfRecords {[weak self] code in
+    @objc func loadData() {
+        viewModel.fetchListOfRecords(page: currentPage, pageLimit: pageLimit) { [weak self] code in
             guard let currentSelf = self else { return }
-            if code == Constants.successCode && currentSelf.viewModel.allData != nil {
-                DispatchQueue.main.async {
+            if code == Constants.successCode && currentSelf.viewModel.allData.count != 0 {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                     currentSelf.tableView.reloadData()
                 }
             } else {
                 // handle Api failure
             }
         }
+        currentPage = currentPage + 1
     }
+    
+    
+    func fecthNextPageRecords() {
+        loadData()
+    }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showDetailView" {
@@ -58,12 +68,6 @@ class ViewController: UIViewController, TableViewDataSourceDelegate {
     
     func navigateToVC(data: JsonResponseModel) {
         performSegue(withIdentifier: "showDetailView", sender: data)
-    }
-    
-    func reloadData() {
-        DispatchQueue.main.async {
-            self.tableView.reloadData()
-        }
     }
 }
 
