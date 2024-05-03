@@ -16,8 +16,8 @@ final class ServiceManager {
     
     let session = URLSession.shared
     
-    func fetchRecords(completion: @escaping (Result<[JsonResponseModel], ApiError>) -> Void) {
-        let urlString = "https://jsonplaceholder.typicode.com/posts"
+    func fetchRecords(page: Int, limit: Int, completion: @escaping (Result<[JsonResponseModel], ApiError>) -> Void) {
+        let urlString = "https://jsonplaceholder.typicode.com/posts?_page=\(page)&_limit=\(limit)"
         guard let url = URL(string: urlString) else {
             completion(.failure(.apiOperationFailed("Unable to perform the operation")))
             return

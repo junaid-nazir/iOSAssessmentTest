@@ -16,8 +16,8 @@ class JsonResponseViewModel {
     var errorMessage = ""
     weak var delegate: JsonResponseViewModelDelegate?
     
-    func fetchListOfRecords(completionHandler: @escaping(String?) -> Void) {
-        serviceManager.fetchRecords { result in
+    func fetchListOfRecords(page: Int, pageLimit: Int, completionHandler: @escaping(String?) -> Void) {
+        serviceManager.fetchRecords(page: page, limit: pageLimit) { result in
             switch result {
             case .success(let data):
                 self.allData = data
